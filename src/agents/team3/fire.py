@@ -30,3 +30,4 @@ class Fire(KartAgent):
 
         action["fire"] = fire
         return action
+    #hopefullylasttest
