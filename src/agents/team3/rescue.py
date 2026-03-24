@@ -28,6 +28,6 @@ class Rescue(KartAgent):
         if self.time_blocked >= 35:
             rescue = True
             self.time_blocked = 0
-		#haha
+		
         action["rescue"] = rescue
         return action
