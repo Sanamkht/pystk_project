@@ -40,4 +40,4 @@ class Agent3(KartAgent):
 
     def choose_action(self, obs):
         return self.rescue.choose_action(obs)
-    #practice
+    #pract
