@@ -31,3 +31,4 @@ class Rescue(KartAgent):
 		
         action["rescue"] = rescue
         return action
+        #hehe
