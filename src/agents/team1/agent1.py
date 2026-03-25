@@ -19,7 +19,7 @@ class Agent1(KartAgent):
         self.agent_positions = []
         self.obs = None
         self.isEnd = False
-        self.name = "Tasty Crousteam"
+        self.name = "Sanam khataei"
 
         path_conf = Path(__file__).resolve().parent
         path_conf = str(path_conf) + '/ConfigFileTeam1.yaml'   #Chemin du fichier de configuration
@@ -40,4 +40,9 @@ class Agent1(KartAgent):
         return self.isEnd
 
     def choose_action(self, obs):
-        return self.agentItems.choose_action(obs)
+        action = self.agentItems.choose_action(obs)
+        brake = action["brake"]
+        if obs["distance_down_track"] == self.getTrackLength()/2.0:
+            acceleration = 0.0
+            brake = True
+        return action
